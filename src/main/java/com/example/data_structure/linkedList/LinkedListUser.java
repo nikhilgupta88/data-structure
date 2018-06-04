@@ -2,11 +2,20 @@ package com.example.data_structure.linkedList;
 
 import java.util.Stack;
 
+/**
+ * 
+ * @author NikhilGupta
+ *
+ */
 public class LinkedListUser {
 
 	public Node head; // head of the list
 
-	// Add at Beginning
+	
+	/**
+	 * Add at Beginning of the List
+	 * @param data New Node
+	 */
 	public void addAtBegin(int data) {
 		Node newNode = new Node(data);
 		if (head == null) {
@@ -16,7 +25,11 @@ public class LinkedListUser {
 		head = newNode;
 	}
 
-	// Add at end
+	
+	/**
+	 * Add at end of the List
+	 * @param data New Node
+	 */
 	public void addAtEnd(int data) {
 		Node newNode = new Node(data);
 		Node current = head;
@@ -31,22 +44,27 @@ public class LinkedListUser {
 		current.next = newNode;
 	}
 
-	// Add at index
-	public void addAtIndex(int data, int position) {
+	
+	/**
+	 * Add at the given index
+	 * @param data
+	 * @param index
+	 */
+	public void addAtIndex(int data, int index) {
 		int size = length();
-		if (position > size || position < 0) {
-			System.out.println(" Invalid Position. ");
+		if (index > size || index < 0) {
+			System.out.println(" Invalid index. ");
 			return;
 		}
 		Node newNode = new Node(data);
-		if (position == 0) {
+		if (index == 0) {
 			newNode.next = head;
 			head = newNode;
 			return;
 		} else {
 			Node current = head;
 			int count = 0;
-			while (count < position - 1) {
+			while (count < index - 1) {
 				current = current.next;
 				count++;
 			}
@@ -57,7 +75,11 @@ public class LinkedListUser {
 		}
 	}
 
-	// delete at Beginning
+	
+	/**
+	 * Delete from Beginning
+	 * @return Node
+	 */
 	public int deleteAtBegin() {
 		Node current = head;
 		if (head == null) {
@@ -67,7 +89,11 @@ public class LinkedListUser {
 		return current.data;
 	}
 
-	// delete at end
+	
+	/**
+	 * Delete from end of the List
+	 * @return Node
+	 */
 	public int deleteAtEnd() {
 		if (head == null) {
 			return 0;
@@ -83,6 +109,10 @@ public class LinkedListUser {
 	}
 
 	// Find out Length of Linked List
+	/**
+	 * Find out the Length of Linked List
+	 * @return length
+	 */
 	public int length() {
 		if (head == null) {
 			return 0;
@@ -97,13 +127,18 @@ public class LinkedListUser {
 	}
 
 	// Delete at index
-	public int deleteAtIndex(int position) {
+	/**
+	 * Delete from Given Index
+	 * @param index
+	 * @return
+	 */
+	public int deleteAtIndex(int index) {
 		int size = length();
-		if (position > size || position < 0) {
+		if (index > size || index < 0) {
 			System.out.println(" Invalid Postion. ");
 			return 0;
 		}
-		if (position == 0) {
+		if (index == 0) {
 			Node temp = head;
 			head = head.next;
 			temp.next = null;
@@ -111,7 +146,7 @@ public class LinkedListUser {
 		} else {
 			Node current = head;
 			int count = 0;
-			while (count < position - 1) {
+			while (count < index - 1) {
 				current = current.next;
 				count++;
 			}
@@ -122,7 +157,12 @@ public class LinkedListUser {
 		}
 	}
 
-	// Find First index that a no. first occur on which index
+	
+	/**
+	 * Find First index that a no. first occur on which index
+	 * @param data
+	 * @return FurstIndex
+	 */
 	public int searchFirstIndex(int data) {
 		Node current = head;
 		int count = 0;
@@ -132,8 +172,10 @@ public class LinkedListUser {
 		}
 		return count;
 	}
-
-	// Reverse LinkedListUser Iterative Method
+	
+	/**
+	 * Reverse a LinkedList Iteratively
+	 */
 	public void reverse() {
 		if (head == null) {
 			return;
@@ -150,7 +192,10 @@ public class LinkedListUser {
 		head = previous;
 	}
 
-	// Display Method
+	
+	/**
+	 * Print the Linked List
+	 */
 	public void display() {
 		if (head == null) {
 			return;
@@ -167,26 +212,34 @@ public class LinkedListUser {
 		System.out.println();
 	}
 
-	// find element by given position
-	public int elementAt(int position) {
+	
+	/**
+	 * Find element at given Index
+	 * @param index
+	 * @return Element
+	 */
+	public int elementAt(int index) {
 		Node current = head;
 		int count = 0;
 		while (current != null) {
-			if (count == position)
+			if (count == index)
 				return current.data;
 			count++;
 			current = current.next;
 		}
 		return 0;
 	}
-
+	/**
+	 * Add at the Middle position of List
+	 * @param data
+	 */
 	public void addAtMiddle(int data) {
 		int size = length();
-		int position = size / 2;
+		int index = size / 2;
 		Node current = head;
 		Node newNode = new Node(data);
 		int count = 0;
-		while (count < position - 1) {
+		while (count < index - 1) {
 			current = current.next;
 			count++;
 		}
@@ -194,13 +247,16 @@ public class LinkedListUser {
 		current.next = newNode;
 		newNode.next = temp;
 	}
-
+	/**
+	 * Delete from Middle index
+	 * @return Node Value
+	 */
 	public int deleteAtMiddle() {
 		int size = length();
-		int position = size / 2;
+		int index = size / 2;
 		Node current = head;
 		int count = 0;
-		while (count < position - 1) {
+		while (count < index - 1) {
 			current = current.next;
 			count++;
 		}
@@ -210,7 +266,11 @@ public class LinkedListUser {
 		return temp1.data;
 	}
 
-	// Swap to elements from given LinkedList
+	/**
+	 * Swap two elements from given Position in a List
+	 * @param x
+	 * @param y
+	 */
 	public void swapNodes(int x, int y) {
 		if (x == y)
 			return;
@@ -245,7 +305,9 @@ public class LinkedListUser {
 		currY.next = temp;
 	}
 
-	// Remove Adjacent Duplicates Element
+	/**
+	 * Remove Adjacent Duplicates
+	 */
 	public void removeAdjacentDuplicates() {
 		Node current = head;
 		int i = 0, j = 0;
@@ -263,7 +325,12 @@ public class LinkedListUser {
 
 	}
 
-	// Compare Given two LinkedList is same or not?
+	/**
+	 * Compare two linkedList is same or not?
+	 * @param l LinkedList
+	 * @param ll LinkedList
+	 * @return boolean
+	 */
 	public static boolean CompareLists(LinkedListUser l, LinkedListUser ll) {
 		Node headA = l.head, headB = ll.head;
 		while (headA != null && headB != null && headA.data == headB.data) {
@@ -296,7 +363,11 @@ public class LinkedListUser {
 		}
 	}
 
-	// Get Node from Last Method 1
+	/**
+	 * Get Node from Last Method 1
+	 * @param n position from Last
+	 * @return Node Value
+	 */
 	public int getNthFromLast(int n) {
 		Node current = head;
 		int size = length();
@@ -311,7 +382,11 @@ public class LinkedListUser {
 		return current.data;
 	}
 
-	// Get Node from Last Method 2
+	/**
+	 * Get Node from Last Method 2
+	 * @param n position from Last
+	 * @return Node Value
+	 */
 	public int getNthFromLast1(int n) {
 		int count = 0;
 		Node m = head, nt = head;
@@ -331,7 +406,12 @@ public class LinkedListUser {
 		return nt.data;
 	}
 
-	// Count How Many times a no. is repeated?
+	
+	/**
+	 *Count How Many times a no. is repeated?
+	 * @param search_for Element
+	 * @return count
+	 */
 	public int count(int search_for) {
 
 		Node current = head;
@@ -347,7 +427,11 @@ public class LinkedListUser {
 		return count;
 	}
 
-	// Merge two LinkedList with sorting
+	/**
+	 * Merge two LinkedList 
+	 * @param l1 LinkedList
+	 * @param l2 LinkedList
+	 */
 	public void mergeSortListsRec(LinkedListUser l1, LinkedListUser l2) {
 		Node current = mergeLists(l1.head, l2.head);
 		System.out.print("[");
@@ -359,8 +443,13 @@ public class LinkedListUser {
 		System.out.print("]");
 		System.out.println();
 	}
-
-	public Node mergeLists(Node headA, Node headB) {
+	/**
+	 * Merge Two LinkedList with sorting
+	 * @param headA
+	 * @param headB
+	 * @return Node
+	 */
+	private Node mergeLists(Node headA, Node headB) {
 		if (headA == null && headB == null)
 			return null;
 		else if (headA == null)
@@ -380,7 +469,11 @@ public class LinkedListUser {
 		return headA;
 	}
 
-	// To Check Given LinkedList is palindrome or not? Using Stack
+	
+	/**
+	 * Check Given LinkedList is palindrome or not by Using Stack?
+	 * @return boolean
+	 */
 	public boolean isPalindrome() {
 		Node current = head, runner = head;
 		if (current.next == null)
@@ -402,7 +495,12 @@ public class LinkedListUser {
 		return true;
 	}
 
-	// To Check Given LinkedList is palindrome or not? Using Reverse
+	
+	/**
+	 * Check Given LinkedList is palindrome or not?
+	 * by Using Reverse a LinkedList
+	 * @return boolean
+	 */
 	public boolean isPalindromeUsingRev() {
 		Node current = head, runner = head, secondStart, firstStart = head;
 		if (current.next == null)
@@ -432,7 +530,11 @@ public class LinkedListUser {
 		}
 		return true;
 	}
-
+	/**
+	 * Reverse a LinkedList Recursively
+	 * @param head
+	 * @return Node
+	 */
 	public Node reverseRec(Node head) {
 		Node current = head, next = current.next;
 		if (head == null)
@@ -446,7 +548,12 @@ public class LinkedListUser {
 
 	}
 
-	// Addition(Sum) two Singly LinkedList
+	
+	/**
+	 * Addition(Sum) of two Singly LinkedList
+	 * @param l1 LinkedList
+	 * @param l2 LinkedList
+	 */
 	public void sumTwoLists(LinkedListUser l1, LinkedListUser l2) {
 		Node first = l1.head, second = l2.head;
 		Node result = null, temp = null, prev = null;
@@ -483,7 +590,9 @@ public class LinkedListUser {
 		System.out.print("]");
 		System.out.println();
 	}
-
+	/**
+	 * Swap a LinkedList pair wise
+	 */
 	public void pairWiseSwap() {
 		Node current = head, newHead = current.next;
 		while (true) {
