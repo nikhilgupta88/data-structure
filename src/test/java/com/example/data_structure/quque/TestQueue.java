@@ -2,6 +2,10 @@ package com.example.data_structure.quque;
 
 import org.junit.Test;
 
+import com.ng.learning.ds.quque.QueueArray;
+import com.ng.learning.ds.quque.QueueLinkedList;
+import com.ng.learning.ds.quque.QueueOperation;
+
 public class TestQueue {
 
 	@Test

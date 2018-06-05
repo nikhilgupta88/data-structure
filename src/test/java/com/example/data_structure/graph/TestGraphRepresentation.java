@@ -2,6 +2,9 @@ package com.example.data_structure.graph;
 
 import org.junit.Test;
 
+import com.ng.learning.ds.graph.Graph;
+import com.ng.learning.ds.graph.GraphRepresentation;
+
 public class TestGraphRepresentation {
 
 	@Test

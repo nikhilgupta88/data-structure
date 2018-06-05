@@ -2,6 +2,10 @@ package com.example.data_structure.stack;
 
 import org.junit.Test;
 
+import com.ng.learning.ds.stack.StackArray;
+import com.ng.learning.ds.stack.StackLinkedList;
+import com.ng.learning.ds.stack.StackUsingQueue;
+
 public class TestStack {
 
 	@Test

@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 import org.junit.Test;
 
+import com.ng.learning.ds.tree.BinarySearchTreeIterative;
+import com.ng.learning.ds.tree.BinarySearchTreeRecursive;
+
 public class TestTree {
 
 	@Test

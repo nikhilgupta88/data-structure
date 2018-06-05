@@ -2,6 +2,8 @@ package com.example.data_structure.array;
 
 import org.junit.Test;
 
+import com.ng.learning.ds.array.RotateArray;
+
 public class TestRotateArray {
 
 	@Test

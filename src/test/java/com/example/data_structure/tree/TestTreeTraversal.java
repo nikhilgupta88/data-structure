@@ -2,6 +2,9 @@ package com.example.data_structure.tree;
 
 import org.junit.Test;
 
+import com.ng.learning.ds.tree.BinarySearchTreeRecursive;
+import com.ng.learning.ds.tree.TreeTraversal;
+
 public class TestTreeTraversal {
 
 	@Test
