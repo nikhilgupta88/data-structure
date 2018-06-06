@@ -3,6 +3,7 @@ package com.ng.learning.ds.linkedList;
 import java.util.Stack;
 
 /**
+ * This class contains lots of implementation of linked list.
  * 
  * @author NikhilGupta
  *
@@ -12,10 +13,10 @@ public class LinkedList {
 	public Node head; // head of the list
 
 	/**
-	 * Add at Beginning of the List
+	 * This method adds an element at Beginning of the Linked List.
 	 * 
 	 * @param data
-	 *            New Node
+	 *            value of that node
 	 */
 	public void addAtBegin(int data) {
 		Node newNode = new Node(data);
@@ -27,10 +28,10 @@ public class LinkedList {
 	}
 
 	/**
-	 * Add at end of the List
+	 * This method adds an element at end of the Linked List.
 	 * 
 	 * @param data
-	 *            New Node
+	 *            value of that node
 	 */
 	public void addAtEnd(int data) {
 		Node newNode = new Node(data);
@@ -47,10 +48,10 @@ public class LinkedList {
 	}
 
 	/**
-	 * This Method adds an element into LinkedList by Given index
+	 * This Method adds an element into Linked List by Given index
 	 * 
 	 * @param data
-	 *            value of the Node
+	 *            value of that Node
 	 * @param index
 	 *            index where we want to add that node
 	 */
@@ -80,7 +81,8 @@ public class LinkedList {
 	}
 
 	/**
-	 * Delete from Beginning
+	 * This method returns the value of the deleted node and deletes the node from
+	 * the beginning of the Linked List.
 	 * 
 	 * @return value of the deleted Node
 	 */
@@ -94,7 +96,8 @@ public class LinkedList {
 	}
 
 	/**
-	 * Delete from end of the List
+	 * This method returns the value of the deleted node and deletes the node from
+	 * the end of the Linked List.
 	 * 
 	 * @return value of deleted Node
 	 */
@@ -132,10 +135,11 @@ public class LinkedList {
 	}
 
 	/**
-	 * This Method delete the Node by Given Index
+	 * This method returns the value of the deleted node and deletes the node by the
+	 * given index from the Linked List.
 	 * 
 	 * @param index
-	 *            of the Node which we want to delete
+	 *            index of the Node which we want to delete
 	 * @return value of the deleted Node
 	 */
 	public int deleteAtIndex(int index) {
@@ -165,11 +169,11 @@ public class LinkedList {
 
 	/**
 	 * This Method returns the First index of that Node which first occurs in Given
-	 * Linked List
+	 * Linked List.
 	 * 
 	 * @param data
 	 *            value of that Node
-	 * @return firstI index of that no.
+	 * @return first index of that no.
 	 */
 	public int searchFirstIndex(int data) {
 		Node current = head;
@@ -182,7 +186,7 @@ public class LinkedList {
 	}
 
 	/**
-	 * Reverse a LinkedList Iteratively
+	 * This method reverses a Linked List Iteratively.
 	 */
 	public void reverse() {
 		if (head == null) {
@@ -201,7 +205,7 @@ public class LinkedList {
 	}
 
 	/**
-	 * Print the Linked List
+	 * This method prints the Linked List on the console.
 	 */
 	public void display() {
 		if (head == null) {
@@ -238,9 +242,10 @@ public class LinkedList {
 	}
 
 	/**
-	 * Add at the Middle position of List
+	 * This method adds the node at the Middle of Linked List.
 	 * 
 	 * @param data
+	 *            value of the node
 	 */
 	public void addAtMiddle(int data) {
 		int size = length();
@@ -258,9 +263,10 @@ public class LinkedList {
 	}
 
 	/**
-	 * Delete from Middle index
+	 * This method returns the value of the deleted node and deletes the node from
+	 * Middle of the Linked List.
 	 * 
-	 * @return Node Value
+	 * @return Node value of the delted node
 	 */
 	public int deleteAtMiddle() {
 		int size = length();
@@ -278,7 +284,7 @@ public class LinkedList {
 	}
 
 	/**
-	 * This Method swaps two elements from Linked List by given indexes
+	 * This Method swaps two elements from Linked List by given indexes.
 	 * 
 	 * @param x
 	 *            index from
@@ -338,13 +344,14 @@ public class LinkedList {
 	}
 
 	/**
-	 * Compare two linkedList is same or not?
+	 * This method compares two Linked List are same or not and returns true if they
+	 * are same otherwise returns false.
 	 * 
 	 * @param l
-	 *            LinkedList
+	 *            First LinkedList
 	 * @param ll
-	 *            LinkedList
-	 * @return boolean
+	 *            Second LinkedList
+	 * @return boolean true if two Lists are same otherwise returns false
 	 */
 	public static boolean CompareLists(LinkedList l, LinkedList ll) {
 		Node headA = l.head, headB = ll.head;
@@ -356,7 +363,7 @@ public class LinkedList {
 	}
 
 	/**
-	 * This method rotates the Linked List by given position
+	 * This method rotates the Linked List by their given position.
 	 * 
 	 * @param k
 	 *            position from where we want to rotate
@@ -519,10 +526,10 @@ public class LinkedList {
 	}
 
 	/**
-	 * This method returns true if given LinkedList is a palindrome 
-	 *	otherwise returns false.
-	 * Here we use a stack.
-	 * @return boolean true if palindrome otherwise false. 
+	 * This method returns true if given LinkedList is a palindrome otherwise
+	 * returns false. Here we use a stack.
+	 * 
+	 * @return boolean true if palindrome otherwise false.
 	 */
 	public boolean isPalindrome() {
 		Node current = head, runner = head;
@@ -546,10 +553,10 @@ public class LinkedList {
 	}
 
 	/**
-	 * This method returns true if given LinkedList is a palindrome 
-	 *	otherwise returns false.
-	 * Here we use a stack.
-	 * @return boolean true if palindrome otherwise false. 
+	 * This method returns true if given LinkedList is a palindrome otherwise
+	 * returns false. Here we use a stack.
+	 * 
+	 * @return boolean true if palindrome otherwise false.
 	 */
 	public boolean isPalindromeUsingRev() {
 		Node current = head, runner = head, secondStart, firstStart = head;
@@ -582,7 +589,7 @@ public class LinkedList {
 	}
 
 	/**
-	 * Reverse a LinkedList Recursively
+	 * This method reverses a Linked List Recursively
 	 * 
 	 * @param head
 	 * @return Node
@@ -601,14 +608,14 @@ public class LinkedList {
 	}
 
 	/**
-	 * Addition(Sum) of two Singly LinkedList
+	 * This method adds(sums) two Singly Linked List.
 	 * 
 	 * @param l1
-	 *            LinkedList
+	 *            First LinkedList
 	 * @param l2
-	 *            LinkedList
+	 *            Second LinkedList
 	 */
-	public void sumTwoLists(LinkedList l1, LinkedList l2) {
+	public static LinkedList sumTwoLists(LinkedList l1, LinkedList l2) {
 		Node first = l1.head, second = l2.head;
 		Node result = null, temp = null, prev = null;
 		int carry = 0, sum;
@@ -634,15 +641,9 @@ public class LinkedList {
 		if (carry > 0) {
 			temp.next = new Node(carry);
 		}
-		Node current = result;
-		System.out.print("[");
-		while (current != null) {
-			System.out.print(current.data + " ---> ");
-			current = current.next;
-		}
-		System.out.print(current);
-		System.out.print("]");
-		System.out.println();
+		LinkedList linkedList = new LinkedList();
+		linkedList.head = result;
+		return linkedList;
 	}
 
 	/**

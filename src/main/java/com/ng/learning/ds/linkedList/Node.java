@@ -1,6 +1,6 @@
 package com.ng.learning.ds.linkedList;
 
-public class Node {
+class Node {
 	public int data; // first field of node for data
 	public Node next;
 	public Node prev;
